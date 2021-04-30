@@ -1,0 +1,93 @@
+-- phpMyAdmin SQL Dump
+-- version 4.9.0.1
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generaciÃ³n: 05-06-2020 a las 20:02:22
+-- VersiÃ³n del servidor: 10.4.6-MariaDB
+-- VersiÃ³n de PHP: 7.3.9
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `bds_control`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_asistencia`
+--
+
+CREATE TABLE `tbl_asistencia` (
+  `PK_Asistencia` int(11) NOT NULL,
+  `FK_Cedula` int(11) NOT NULL,
+  `Actividad` varchar(20) COLLATE utf8_bin NOT NULL,
+  `Fecha_Ingreo` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tbl_usuarios`
+--
+
+CREATE TABLE `tbl_usuarios` (
+  `PK_Cedula` int(11) NOT NULL,
+  `Nombre` varchar(20) COLLATE utf8_bin NOT NULL,
+  `Apellido` varchar(20) COLLATE utf8_bin NOT NULL,
+  `Gmail` varchar(20) COLLATE utf8_bin NOT NULL,
+  `Carrera` varchar(20) COLLATE utf8_bin NOT NULL,
+  `Semestre` int(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
+
+--
+-- Ãndices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `tbl_asistencia`
+--
+ALTER TABLE `tbl_asistencia`
+  ADD PRIMARY KEY (`PK_Asistencia`),
+  ADD UNIQUE KEY `FK_Cedula` (`FK_Cedula`);
+
+--
+-- Indices de la tabla `tbl_usuarios`
+--
+ALTER TABLE `tbl_usuarios`
+  ADD PRIMARY KEY (`PK_Cedula`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `tbl_asistencia`
+--
+ALTER TABLE `tbl_asistencia`
+  MODIFY `PK_Asistencia` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `tbl_asistencia`
+--
+ALTER TABLE `tbl_asistencia`
+  ADD CONSTRAINT `tbl_asistencia_ibfk_1` FOREIGN KEY (`FK_Cedula`) REFERENCES `tbl_usuarios` (`PK_Cedula`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
