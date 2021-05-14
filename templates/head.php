@@ -9,4 +9,5 @@
 		<script src="js/jquery.min-3.4.1.js"></script>
 		<script src="js/javascrip.js"></script>
 	</head>
-	<body>
+	
+	<body class="no-margin">

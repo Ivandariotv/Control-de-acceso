@@ -1,0 +1,20 @@
+.main-section{
+    width: 100%;
+    height: calc(100% - 32px);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.main-section .banner{
+    background-image: url("../resource/image/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    grid-column: 1 / 4;
+    grid-row: 1;
+}
+
+.main-section .form-container{
+    grid-column: 3 / 6;
+    grid-row: 1;
+}
