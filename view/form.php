@@ -9,7 +9,7 @@
     </div>
 
     <div class="form-container">
-        <form action="">
+        <form>
             <div>
                 <img src="resource/image/logo.png" alt="logo">
             </div>
@@ -17,7 +17,7 @@
             <input type="text" placeholder="Ingrese su numero de documento">
             <input type="text" placeholder="¿Que actividad va a realizar?">
             <input type="button" value="Registrar">
-            <a href="#">Terminos y condiciones de uso</a>
+            <a href="#Terminos-y-condiciones">Terminos y condiciones de uso</a>
         </form>
     </div>
 </section>
