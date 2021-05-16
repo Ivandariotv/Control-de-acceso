@@ -10,11 +10,64 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    box-shadow: inset -200px 0px 100px -100px rgba(255,255,255,1);
     grid-column: 1 / 4;
     grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section .banner article{
+    text-align: center;
+    color: #fff;
+}
+
+.main-section .banner article h1{
+    font-size: 30px;
+}
+
+.main-section .banner article h2{
+    font-size: 38px;
+}
+
+.main-section .banner article h3{
+    font-size: 28px;
+}
+
+.main-section .banner article h4{
+    font-size: 30px;
+    width: 400px;
+    object-fit: cover;
 }
 
 .main-section .form-container{
     grid-column: 3 / 6;
     grid-row: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-section .form-container form{
+    width: 300px;
+    padding: 10px;
+    background-color: red;
+    display: grid;
+    text-align: center;
+}
+
+.main-section .form-container form p{
+    font-size: 15px;
+    margin: 0px;
+}
+
+.main-section .form-container form input{
+    font-size: 14px;
+    padding: 5px 10px;
+    margin: 2px;
+}
+
+.main-section .form-container form button{
+    width: 100%;
 }
